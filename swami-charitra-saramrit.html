@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>स्वामी चरित्र सारामृत</title>
+    <style>
+        .loader {
+  position: relative;
+  width: 64px;
+  height: 60px;
+}
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  width: 64px;
+  height: 32px;
+  border-radius: 0 0 50px 50px;
+  animation: move 0.5s linear infinite alternate;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #FF3D00;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%) rotate(0deg);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: translateX(-50%) rotate(360deg)}
+}
+@keyframes move {
+  0% { transform: rotate(10deg)}
+  100% { transform: rotate(-10deg)}
+}
+      
+    </style>
+</head>
+<body class="bg-slate-50">
+    <div class="loader-container fixed bg-red-100 z-10 top-0 right-0 left-0 bottom-0 flex justify-center items-center" id="loader">
+        <div class=" loader">
+    </div>
+        
+    </div>
+    <div class="header-container flex justify-between items-center p-5">
+        <div class="parayan-container flex bg-red-100 text-red-900 gap-2 text-xl rounded-full py-2 px-4">
+            <p>एकूण पारायण</p>
+            <p class="bg-red-900 text-red-50 px-2 rounded-full" id="total-parayan">0</p>
+        </div>
+        <div class="flex bg-red-100 py-2 px-4 gap-3 text-5xl rounded-full text-red-800 shadow-sm">
+            <button class="flex" id="inc"><span class="material-symbols-outlined">
+                text_increase
+                </span></button>
+                <div class="w-0.5 10 bg-red-300"></div>
+            <button class="text-4xl flex" id="drc"><span class="material-symbols-outlined">
+                text_decrease
+                </span></button>
+        </div>
+    </div>
+    <div class="content-container text-center px-4 flex flex-col my-4">
+        <h2 class="content-heading bg-red-900 font-semibold text-2xl py-2 px-4 mb-4 self-center rounded-full text-red-50"></h2>
+        <p class="content-data text-red-900"></p>
+        <div class="flex justify-center gap-4 mt-5">
+            <button class="nextBtn text-red-800 bg-red-100 py-2 px-4 rounded-full font-semibold hover:bg-red-200 transition-all ease flex gap-1 text-xl"><span class="material-symbols-outlined">
+                bookmark
+                </span>अध्याय पूर्ण</button>
+            <button class="hidden text-red-800 bg-red-100 py-2 px-4 rounded-full font-semibold hover:bg-red-200 transition-all ease gap-1 text-xl parayan-btn">Parayan</button>
+        </div>
+    </div>
+    <div class="text-3xl"></div>
+    <script src="./public/js/swami.js" defer></script>
+</body>
+</html>
