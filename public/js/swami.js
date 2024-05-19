@@ -7,10 +7,12 @@ window.addEventListener('load', () => {
 const contentHeading = document.querySelector('.content-heading');
 const contentData = document.querySelector('.content-data');
 const nextBtn = document.querySelector('.nextBtn');
+const backBtn = document.querySelector('#backBtn');
 const incBtn = document.querySelector('#inc');
 const drcBtn = document.querySelector('#drc');
 const totalParayan = document.querySelector('#total-parayan');
 let parayanBtn = document.querySelector('.parayan-btn');
+
 
 const data = [
           {
@@ -159,6 +161,14 @@ nextBtn.addEventListener('click', () => {
     })
 })
 
+backBtn.addEventListener('click', () => {
+  currentIndex = Math.max(currentIndex - 1, 0);
+  showContent(currentIndex);
+  localStorage.setItem('currentAdhyay', currentIndex);
+  window.scrollTo({
+    top: 0
+  })
+})
 
 
 incBtn.addEventListener('click', () => {
@@ -197,3 +207,7 @@ else {
   parayanBtn.classList.add('hidden');
   nextBtn.classList.remove('hidden');
 }
+
+//  backBtn.addEventListener('click', () => { 
+//   console.log('test');
+// })
