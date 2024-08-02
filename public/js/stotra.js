@@ -7,14 +7,9 @@ window.addEventListener('load', () => {
 const data = [
     {
         "id": 1,
-        "title": "coming soon",
-        "content": "content 1"
+        "title": "येत आहे लवकरच",
+        "content": ""
     },
-    {
-        "id": 1,
-        "title": "coming soon",
-        "content": "content 2"
-    }
 ]
 
 function showContent(id) {
