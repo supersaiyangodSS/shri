@@ -100,7 +100,7 @@
     <div class="w-full md:w-5/12 mx-auto flex flex-col p-2">
         <div class="container mx-auto">
             <i class="fa-solid fa-circle-xmark"></i>
-            <img src="./public/image/1000071020.jpg" class="md:w-4/12 mx-auto rounded-xl" alt="">
+            <img src="./public/image/1000051487.jpg" class="md:w-4/12 mx-auto rounded-xl" alt="">
         </div>
         <div class="flex flex-col gap-2 my-2">
             <a class="py-4 font-semibold active:scale-95 text-red-900 bg-red-200 rounded-full text-center text-xl transition-transform"
@@ -122,42 +122,6 @@
 
     </div>
     <script src="./public/js/script.js" defer></script>
-    <script>
-        var api = 'basic_panchang';
-        var userId = 'vedant';
-        var apiKey = 'E1OEd3qaU66yg6kELqP9I7rCmVM7w2238wsMkjb4';
-        var language = 'marathi' // By default it is set to en
-        var data = {
-            day: 6,
-            month: 1,
-            year: 2000,
-            hour: 7,
-            min: 45,
-            lat: 19.132,
-            lon: 72.342,
-            tzone: 5.5,
-        };
-
-        var auth = "Basic " + new Buffer(userId + ":" + apiKey).toString("base64");
-
-        var request = $.ajax({
-            url: "https://json.astrologyapi.com/v1/" + api,
-            method: "POST",
-            dataType: 'json',
-            headers: {
-                "authorization": auth,
-                "Content-Type": 'application/json',
-                "Accept-Language": language
-            },
-            data: JSON.stringify(data)
-        });
-
-        request.then(function (resp) {
-            console.log(resp);
-        }, function (err) {
-            console.log(err);
-        });
-    </script>
 </body>
 <footer
     class="w-full mx-auto left-0 right-0 flex justify-center flex-col items-center bg-red-50 text-red-900 rounded-xl shadow-sm z-0 py-4">
