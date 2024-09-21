@@ -65,10 +65,6 @@
 
 <body class="">
 
-    <button id="install-button" class="absolute bottom-10 right-10 bg-red-300 p-4 rounded-full text-xl"
-        style="display: none;">Install App</button>
-
-
     <div class="loader-container fixed bg-red-100 z-10 top-0 right-0 left-0 bottom-0 flex justify-center items-center"
         id="loader">
         <div class=" loader"></div>
@@ -76,11 +72,12 @@
     <nav class="flex justify-between items-center bg-red-50 text-red-900  p-4 mb-4">
         <!-- <img src="" alt="logo"> -->
         <p class="font-semibold text-xl">श्री स्वामी समर्थ किनवट केंद्र</p>
-        <ul class="hidden gap-6 font-semibold md:flex">
+        <ul class="hidden gap-6 font-semibold md:flex items-center">
             <li><a href="/">मुखपृष्ठ</a></li>
             <li><a href="/stotra.html">स्तोत्र</a></li>
             <li><a href="/japa.html">जप माळ</a></li>
             <li><a href="/swami-charitra-saramrit.html">स्वामी चरित्र सारामृत</a></li>
+            <li><button id="install-button" class="uppercase text-red-50 bg-red-900 px-4 rounded-full" style="display: none;">Install</button></li>
         </ul>
         <button class="flex p-2 md:hidden active:scale-90" id="hamburger-btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#7f1d1d">
@@ -94,6 +91,7 @@
         <li><a href="/stotra.html">स्तोत्र</a></li>
         <li><a href="/japa.html">जप माळ</a></li>
         <li><a href="/swami-charitra-saramrit.html">स्वामी चरित्र सारामृत</a></li>
+        <li><button id="install-button" class="uppercase text-red-50 bg-red-900 px-4 rounded-full" style="display: none;">Install</button></li>
         <button class="font-normal mt-2 active:scale-90" id="hamburger-btn-close"><svg
                 xmlns="http://www.w3.org/2000/svg" height="45px" viewBox="0 -960 960 960" width="45px" fill="#7f1d1d">
                 <path
