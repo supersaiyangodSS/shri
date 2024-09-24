@@ -1,10 +1,33 @@
 const CACHE_NAME = 'v1';
 const urlsToCache = [
   '/',
-  '/index.html',  // Add your essential files here
-  '/styles.css',
-  '/script.js',
-  '/images/logo.png'
+  '/index.html',
+    '/japa.html',
+    '/privacy-policy.html',
+    '/terms-and-conditions.html',
+    '/stotra.html',
+    '/swami-charitra-saramrit.html',
+    '/pages/bhupali.html',
+    '/pages/developer.html',
+    '/pages/naivedya-arti-10.html',
+    '/pages/naivedya-arti-6.html',
+    '/pages/veshesh-arti-12.html',
+    '/public/css/index.css',
+    '/public/css/input.css',
+    '/public/css/style.css',
+    '/public/js/mala.js',
+    '/public/js/pages.js',
+    '/public/js/script.js',
+    '/public/js/stotra.js',
+    '/public/js/swami.js',
+    '/public/image/00000PORTRAIT_00000_BURST20220621163759015.jpg',
+    '/public/image/1000051487.jpg',
+    '/public/image/1000051607.jpg',
+    '/public/image/1000071020.jpg',
+    '/public/image/1000071024.jpg',
+    '/public/image/cancel_48dp_FILL0_wght400_GRAD0_opsz48 (1).svg',
+    '/public/image/rudraksh.png',
+    '/public/image/shri.png',
 ];
 
 // Install event: cache all the specified files
