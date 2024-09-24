@@ -121,44 +121,26 @@
 
     </div>
     <script>if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then((registration) => {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                }).catch((error) => {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
-
-        let deferredPrompt;
-        const installButton = document.getElementById('install-button');
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            installButton.style.display = 'block';
-
-            installButton.addEventListener('click', () => {
-                installButton.style.display = 'none';
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('User accepted the install prompt');
-                    } else {
-                        console.log('User dismissed the install prompt');
-                    }
-                    deferredPrompt = null;
-                });
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch((error) => {
+                console.log('Service Worker registration failed:', error);
             });
-        });
+    }
+    
+    // Default PWA install prompt
+    window.addEventListener('beforeinstallprompt', (e) => {
+        console.log('beforeinstallprompt event fired');
+        // No preventDefault() here, so the default browser install prompt will appear
+    });
+    
 
     </script>
     <script src="./public/js/script.js" defer></script>
 </body>
 <footer
     class="w-full mx-auto left-0 right-0 flex justify-center flex-col items-center bg-red-50 text-red-900 rounded-xl shadow-sm z-0 py-4">
-
-    <button id="install-button" class="uppercase text-red-50 bg-red-900 py-1 px-4 mb-4 font-semibold rounded-full" style="display: none;">Install</button>
-
     <div class="about flex flex-col justify-center items-center">
         <img src="./public/image/1000051607.jpg" alt="logo" class="rounded-full w-24">
         <p class="my-4 text-center w-9/12">
