@@ -9,7 +9,7 @@ const urlsToCache = [
     '/swami-charitra-saramrit.html',
     '/pages/bhupali.html',
     '/pages/developer.html',
-    '/pages/naivedya-arti-10.html',
+    '/pages/naivedya-arti-10.html', 
     '/pages/naivedya-arti-6.html',
     '/pages/veshesh-arti-12.html',
     '/public/css/index.css',
